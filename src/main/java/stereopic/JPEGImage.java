@@ -23,9 +23,13 @@ public class JPEGImage {
     long offset;
     long size;
 
-    JPEGImage(long offset, long size) {
+
+    MPEntry.MPType type;
+
+    JPEGImage(long offset, long size, MPEntry.MPType type) {
         this.offset = offset;
         this.size = size;
+        this.type = type;
     }
 
     public long getOffset() {
@@ -34,5 +38,9 @@ public class JPEGImage {
 
     public long getSize() {
         return size;
+    }
+
+    public MPEntry.MPType getMPType() {
+        return type;
     }
 }

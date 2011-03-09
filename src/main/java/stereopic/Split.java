@@ -15,12 +15,15 @@
  */
 package stereopic;
 
+import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * @author Yusuke Yamamoto - yusuke at mac.com
  */
 public interface Split {
-    OutputStream getOutputStream() throws IOException;
+    File getJpegFile(MPEntry.MPType mpType) throws IOException;
+    File getStereoJpegFile() throws IOException;
+
+     File getGifFile() throws IOException;
 }
